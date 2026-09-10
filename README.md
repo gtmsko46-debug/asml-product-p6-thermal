@@ -1,16 +1,10 @@
 # asml-product-p6-thermal
 
-**Optic / first-mirror thermal survival under shared-source load — decide inherit TH-04 reticle-heat KEEP eval vs separate product holdout.**
+Optic / reticle thermal overlay. SEED inherits TH-04 solver shape; Spec #49 must decide inherit holdout XOR new EI HOLDOUT.
 
-| | |
-|--|--|
-| Spec | [`SPEC.md`](SPEC.md) · asml-bench [#49](https://github.com/gtmsko46-debug/asml-bench/issues/49) |
-| Factory | [FACTORY.md](https://github.com/gtmsko46-debug/asml-bench/blob/main/products/FACTORY.md) |
-| Stage | **Spec (M0)** — package/build waits bay |
-
-```bash
-# after M1
-pip install -e '.[dev]'
+```python
+from asml_product_p6_thermal import thermal_overlay
+report = thermal_overlay({"duty_cycle": 0.8, "n_dies": 16})
 ```
 
-Sandbox hill-climbs live on asml-bench (`inherit labs/th-04-reticle-heat/solver.py OR labs/p6-thermal/solver.py`); set `ASML_BENCH_ROOT` to pick up live weights once the loader exists.
+M1 SEED. Parent #49.
