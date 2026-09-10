@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "asml_product_p6_thermal"
+version = "0.1.0"
+description = "Reticle/optic thermal overlay product (P6); SEED inherits TH-04 shape."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Proprietary" }
+dependencies = []
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+[tool.setuptools.packages.find]
+include = ["asml_product_p6_thermal*"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
